@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InputActivity" />
+        <activity android:name=".InputActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShowActivity"
+            android:screenOrientation="landscape"/>
+
     </application>
 
 </manifest>

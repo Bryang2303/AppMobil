@@ -63,7 +63,7 @@
         app:layout_constraintVertical_bias="0.393" />
 
     <EditText
-        android:id="@+id/editTextNumber5"
+        android:id="@+id/editText5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -76,7 +76,7 @@
         app:layout_constraintVertical_bias="0.785" />
 
     <EditText
-        android:id="@+id/editTextNumber4"
+        android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -89,7 +89,7 @@
         app:layout_constraintVertical_bias="0.65" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -102,7 +102,7 @@
         app:layout_constraintVertical_bias="0.521" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -115,7 +115,7 @@
         app:layout_constraintVertical_bias="0.39" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -156,13 +156,16 @@
         app:layout_constraintVertical_bias="0.268" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/listo"
         android:layout_width="151dp"
         android:layout_height="60dp"
         android:backgroundTint="#FF0000"
         android:text="Listo"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="631dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
