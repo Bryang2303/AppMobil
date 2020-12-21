@@ -8,8 +8,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
+// Ventana que muestra el comportamiento de la lista enlazada XOR
 class ShowActivity : AppCompatActivity() {
+    // Variables
     private lateinit var saved1: TextView
     private lateinit var saved2: TextView
     private lateinit var saved3: TextView
@@ -34,11 +35,14 @@ class ShowActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.show)
         var contador = 0
+        // Acceder a memoria
         val preferences = getSharedPreferences("database", Context.MODE_PRIVATE)
+        // Utilizando la misma key de memoria
         val savedName = preferences.getString("savedProductName", "This value doesn't exist")
         //Log.d("Bryan", "Saved message is: $savedName")
-
+        // Se divide el string almacenado, en valores por separado
         val parts = savedName?.split(",")?.toTypedArray()
+        // Variables donde se muestran los nodos de la lista, asi como tambien las direcciones (anterior/siguiente)
         saved1 = findViewById(R.id.show1)
         saved1.text = parts!![0]
         saved2 = findViewById(R.id.show2)
@@ -70,15 +74,17 @@ class ShowActivity : AppCompatActivity() {
 
         actual = findViewById(R.id.mainShow)
         actual.text = parts!![contador]
-
+        // Realizar el recorrido de la lista enlazada XOR
         ante = findViewById(R.id.anterior)
         sig = findViewById(R.id.siguiente)
+        // Anterior
         ante.setOnClickListener {
             if (contador != 0) {
                 contador -= 1
                 actual.text = parts!![contador]
             }
         }
+        // Siguiente
         sig.setOnClickListener {
             if (contador != 4) {
                 contador += 1
